@@ -70,7 +70,7 @@
                 // m(spscular) 高光反射颜色
                 float3 reflectDir = normalize(reflect(-light.direction, worldNormal));
 
-                float3 viewDir = normalize(_WorldSpaceCameraPos.xyz - TransformObjectToWorld(i.worldPos));
+                float3 viewDir = normalize(_WorldSpaceCameraPos.xyz - i.worldPos);
 
                 // phong 模型
                 //float3 spscularColor = light.color * _Specular.rgb * pow(saturate(dot(reflectDir, viewDir)), _Gloss);
